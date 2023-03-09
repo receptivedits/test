@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nice Google</title>
+	<link rel="shortcut icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+
+        #myVideo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+		h1 {
+			margin: 0;
+			padding: 10px;
+			background-color: #fff;
+			border-bottom: 1px solid #ddd;
+			text-align: center;
+			font-size: 28px;
+			font-weight: normal;
+			color: #4285f4;
+		}
+
+		button {
+			display: block;
+			margin: 30px auto;
+			background-color: #4285f4;
+			color: #fff;
+			border: none;
+			border-radius: 3px;
+			font-size: 18px;
+			font-weight: bold;
+			padding: 10px 20px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #3367d6;
+		}
+
+		p {
+			text-align: center;
+			font-size: 14px;
+			color: #666;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<h1><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" height="46"></h1>
+
+	<!-- The video is hidden by default -->
+	<video id="myVideo" style="display:none;" width="1200" height="600">
+		<source src="https://dl.dropboxusercontent.com/s/svy1m6key7ntzzf/a.mp4?dl=0" type="video/mp4">
+	</video>
+
+	<!-- Show a button to start playing the video -->
+	<button id="playButton" onclick="playVideo()">Click Here</button>
+
+	<p>Google needs your permission after the recent update</p>
+
+    <script>
+		function playVideo() {
+			// Get a reference to the video element
+			var video = document.getElementById("myVideo");
+
+			// Show the video element and start playing
+			video.style.display = "block";
+			video.play();
+
+
+			// Hide the play button
+			var playButton = document.getElementById("playButton");
+			playButton.style.display = "none";
+		}
+	</script>
+
+</body>
+</html>
